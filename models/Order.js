@@ -14,13 +14,11 @@ const OrderSchema = new mongoose.Schema(
         },
       },
     ],
-    amout: { type: Number, required: true },
+    amount: { type: Number, required: true },
     address: { type: Object, required: true },
     status: { type: String, default: "pending" },
   },
-  {
-    timestamps: true,
-  }
+  { timestamps: true }
 );
 
 module.exports = mongoose.model("Order", OrderSchema);
